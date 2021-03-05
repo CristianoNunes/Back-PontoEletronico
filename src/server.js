@@ -1,12 +1,11 @@
 const express = require('express');
-const bodyParser = require('body-parser');
 const routes = require('./routes');
 
-// require('./database');
+require('./database');
 
 const app = express();
 
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(routes);
 
 app.listen(3000);

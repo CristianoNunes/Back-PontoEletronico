@@ -8,10 +8,10 @@ class User extends Model {
       email: DataTypes.STRING,
       phone: DataTypes.STRING,
       responsibility: DataTypes.STRING,
-      checkInHour: DataTypes.STRING,
-      checkOutHour: DataTypes.STRING,
-      lunchInHours: DataTypes.STRING,
-      lunchOutHour: DataTypes.STRING,
+      checkIn: DataTypes.STRING,
+      checkOut: DataTypes.STRING,
+      lunchIn: DataTypes.STRING,
+      lunchOut: DataTypes.STRING,
     }, {
       sequelize
     })

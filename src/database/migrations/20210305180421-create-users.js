@@ -1,8 +1,8 @@
 'use strict';
 
 module.exports = {
-  up: async (queryInterface, Sequelize) => {
-    await queryInterface.createTable('users', { 
+  up: (queryInterface, Sequelize) => {
+    return queryInterface.createTable('users', { 
       id: {
         type: Sequelize.INTEGER,
         primaryKey: true,
@@ -29,19 +29,19 @@ module.exports = {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      checkInHours: {
+      checkIn: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      checkOutHours: {
+      checkOut: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      lunchInHour: {
+      lunchIn: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      lunchOutHour: {
+      lunchOut: {
         type: Sequelize.STRING,
         allowNull: false,
       },
@@ -57,11 +57,6 @@ module.exports = {
   },
 
   down: async (queryInterface, Sequelize) => {
-    /**
-     * Add reverting commands here.
-     *
-     * Example:
-     * await queryInterface.dropTable('users');
-     */
+    await queryInterface.dropTable('users');
   }
 };

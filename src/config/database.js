@@ -3,9 +3,8 @@ module.exports = {
   host: 'localhost',
   username: 'root',
   password: 'root',
-  database: 'pontoeletronico',
+  database: 'pontoele',
   define: {
     timestamps: true,
-    underscored: true,
   },
 };
